@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "../styles/home.css"
 
-const API_URL = 'https://api.fda.gov/drug/label.json?search=active_ingredient:';
+function Home() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [apiData, setApiData] = useState(null);
+  const API_URL = 'https://api.fda.gov/drug/label.json?search=active_ingredient:';
 const AUTH_TOKEN = 'izegcZhoYdXVGfLd4QpMLCaK0it5vhF1qbmW8ipB';
 
 const fields = [
@@ -14,10 +16,6 @@ const fields = [
   'keep_out_of_reach_of_children',
   'warnings'
 ];
-
-function App() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [apiData, setApiData] = useState(null);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -70,4 +68,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

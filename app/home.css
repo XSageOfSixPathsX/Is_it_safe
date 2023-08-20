@@ -1,0 +1,12 @@
+/* Add custom styles for the component */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: grey;
+}
+
+
+.title{
+text-align: center;
+font-size: 40px;
+
+}
